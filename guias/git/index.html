@@ -4,16 +4,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>El Zen de Python | Python Ecuador</title>
-<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<title>Instalar Git | Python Ecuador</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="https://python.ec/zen/">
-<link rel="icon" href="../favicon.ico" sizes="16x16">
-<link rel="icon" href="../icon_128x128.ico" sizes="128x128">
-<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><!-- Custom css --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../assets/css/custom.css" type="text/css" media="all">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://python.ec/guias/git/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="icon" href="../../icon_128x128.ico" sizes="128x128">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- Custom css --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../assets/css/custom.css" type="text/css" media="all">
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-128414584-1"></script><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -42,28 +42,28 @@ navbar-dark bg-dark
         <div class="collapse navbar-collapse" id="bs-navbar">
             <ul class="navbar-nav mr-auto">
 <li class="nav-item">
-<a href="../nuestra-comunidad/" class="nav-link">Comunidad</a>
+<a href="../../nuestra-comunidad/" class="nav-link">Comunidad</a>
                 </li>
 <li class="nav-item">
-<a href="../archive.html" class="nav-link">Posts</a>
+<a href="../../archive.html" class="nav-link">Posts</a>
                 </li>
 <li class="nav-item">
-<a href="../coc/" class="nav-link">Código de Conducta</a>
+<a href="../../coc/" class="nav-link">Código de Conducta</a>
                 </li>
 <li class="nav-item">
-<a href="../quiero-ayudar/" class="nav-link">Quiero ayudar</a>
+<a href="../../quiero-ayudar/" class="nav-link">Quiero ayudar</a>
                 </li>
 <li class="nav-item">
-<a href="../guias/" class="nav-link">Guías</a>
+<a href="../" class="nav-link">Guías</a>
                 </li>
 <li class="nav-item">
-<a href="../eventos/" class="nav-link">Eventos</a>
+<a href="../../eventos/" class="nav-link">Eventos</a>
                 </li>
 <li class="nav-item">
-<a href="../becas/" class="nav-link">Becas</a>
+<a href="../../becas/" class="nav-link">Becas</a>
                 </li>
 <li class="nav-item">
-<a href="../sponsors/" class="nav-link">Sponsors</a>
+<a href="../../sponsors/" class="nav-link">Sponsors</a>
 
                 
             </li>
@@ -83,34 +83,43 @@ navbar-dark bg-dark
       <div class="col-sm-8">
         
   <h1>
-    <a href=".">El Zen de Python</a>
+    <a href=".">Instalar Git</a>
   </h1>
 
   <div>
-<p>El Zen de Python, por Tim Peters (<a class="PEP reference external" href="http://www.python.org/dev/peps/pep-0020"><strong>PEP 20</strong></a>).</p>
-<pre class="code python"><a name="rest_code_7da9352a47a9428684b7c57b83ce46fc-1"></a><span class="kn">import</span> <span class="nn">this</span>
+<div class="section" id="instalar-git-en-ubuntu-debian">
+<h2>Instalar Git en Ubuntu/Debian</h2>
+<p>Antes de instalar es recomendable ejecutar las actualizaciones de paquetes del sistema operativo, por ende abrimos una terminal y ejecutamos lo siguiente:</p>
+<p>Para actualizar los repositorios.</p>
+<pre class="code console"><a name="rest_code_d395a21a2908449380a94da389785c90-1"></a><span class="gp">$</span> sudo apt-get update
 </pre>
-<ol class="arabic simple">
-<li>Bello es mejor que feo.</li>
-<li>Explícito es mejor que implícito.</li>
-<li>Simple es mejor que complejo.</li>
-<li>Complejo es mejor que complicado.</li>
-<li>Plano es mejor que anidado.</li>
-<li>Disperso es mejor que denso.</li>
-<li>La legibilidad cuenta.</li>
-<li>Los casos especiales no son tan especiales como para quebrantar las reglas.</li>
-<li>Aunque lo práctico gana a la pureza.</li>
-<li>Los errores nunca deberían dejarse pasar silenciosamente.</li>
-<li>A menos que hayan sido silenciados explícitamente.</li>
-<li>Frente a la ambigüedad, rechaza la tentación de adivinar.</li>
-<li>Debería haber una —y preferiblemente sólo una— manera obvia de hacerlo.</li>
-<li>Aunque esa manera puede no ser obvia al principio a menos que usted sea holandés (Guido van Rossum).</li>
-<li>Ahora es mejor que nunca.</li>
-<li>Aunque nunca es a menudo mejor que ya mismo.</li>
-<li>Si la implementación es difícil de explicar, es una mala idea.</li>
-<li>Si la implementación es fácil de explicar, puede que sea una buena idea.</li>
-<li>Los "namespaces" son una gran idea ¡Hagamos más de esas cosas!.</li>
-</ol>
+<p>Para actualizar los paquetes en el sistema.</p>
+<pre class="code console"><a name="rest_code_34de1a9aa52b43e9800e4c42e4bcc50a-1"></a><span class="gp">$</span> sudo apt-get upgrade
+</pre>
+<p>Luego procedemos a instalar git con el comando install.</p>
+<pre class="code console"><a name="rest_code_4ab7c5fa97f848a08e41fbf35cdfa1a8-1"></a><span class="gp">$</span> sudo apt-get install git
+</pre>
+<p>Este comando instalará git y sus paquetes necesarios.</p>
+<img alt="/images/guias/git/git_install.png" class="align-center" src="../../images/guias/git/git_install.png"><div class="line-block">
+<div class="line"><br></div>
+</div>
+<p>Comprobamos que se haya instalado correctamente con:</p>
+<pre class="code console"><a name="rest_code_6a1eee77a655415b82d60cff5454f70e-1"></a><span class="gp">$</span> git --version
+<a name="rest_code_6a1eee77a655415b82d60cff5454f70e-2"></a><span class="go">git version 2.25.1</span>
+</pre>
+</div>
+<div class="section" id="instalar-git-en-fedora">
+<h2>Instalar Git en Fedora</h2>
+<p>Instalar mediante DNF (o Yum en versiones mas antiguas de Fedora)</p>
+<pre class="code console"><a name="rest_code_4de482120c294f2d83743a08198300fe-1"></a><span class="gp">$</span> sudo dnf install git
+<a name="rest_code_4de482120c294f2d83743a08198300fe-2"></a><span class="go">o</span>
+<a name="rest_code_4de482120c294f2d83743a08198300fe-3"></a><span class="gp">$</span> sudo yum install git
+</pre>
+<p>Comprobamos que se haya instalado correctamente con:</p>
+<pre class="code console"><a name="rest_code_199a361451a5402a964bbf37450da6fa-1"></a><span class="gp">$</span> git --version
+<a name="rest_code_199a361451a5402a964bbf37450da6fa-2"></a><span class="go">git version 2.25.1</span>
+</pre>
+</div>
 </div>
 
       </div>
@@ -159,7 +168,7 @@ navbar-dark bg-dark
 </div>
 
 
-        <script src="../assets/js/all-nocdn.js"></script><script>
+        <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element) {
