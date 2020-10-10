@@ -9,7 +9,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="es" href="../../rss.xml">
 <link rel="canonical" href="https://python.ec/guias/colaborar/">
 <link rel="icon" href="../../favicon.ico" sizes="16x16">
 <link rel="icon" href="../../icon_128x128.ico" sizes="128x128">
@@ -32,7 +32,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 navbar-dark bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://python.ec/">
+        <a class="navbar-brand" href="../../">
 
             <span id="blog-title">Python Ecuador</span>
         </a>
@@ -88,7 +88,8 @@ navbar-dark bg-dark
   <div>
 <p>Recién estamos empezando, así que <strong>hay mucho por hacer</strong>.</p>
 <blockquote>
-No sé programar o no tengo idea por dónde empezar</blockquote>
+<p>No sé programar o no tengo idea por dónde empezar</p>
+</blockquote>
 <p>No todas las tareas involucran código,
 correcciones ortográficas también aportan al proyecto.
 Y si no te atreves a hacer la corrección por ti misma/o,
@@ -98,30 +99,33 @@ A continuación hemos redactado una guía para que puedas iniciar.</p>
 <p class="topic-title">Contenidos</p>
 <ul class="simple">
 <li>
-<a class="reference internal" href="#ejecutar-el-proyecto-localmente" id="id1">Ejecutar el proyecto localmente</a><ul>
-<li><a class="reference internal" href="#python" id="id2">Python</a></li>
-<li><a class="reference internal" href="#obteniendo-el-proyecto" id="id3">Obteniendo el proyecto</a></li>
-<li><a class="reference internal" href="#ejecutando-el-proyecto" id="id4">Ejecutando el proyecto</a></li>
-<li><a class="reference internal" href="#ejecutando-los-tests" id="id5">Ejecutando los tests</a></li>
+<p><a class="reference internal" href="#ejecutar-el-proyecto-localmente" id="id1">Ejecutar el proyecto localmente</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python" id="id2">Python</a></p></li>
+<li><p><a class="reference internal" href="#obteniendo-el-proyecto" id="id3">Obteniendo el proyecto</a></p></li>
+<li><p><a class="reference internal" href="#ejecutando-el-proyecto" id="id4">Ejecutando el proyecto</a></p></li>
+<li><p><a class="reference internal" href="#ejecutando-los-tests" id="id5">Ejecutando los tests</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reportando-errores-bugs" id="id6">Reportando errores (bugs)</a></li>
-<li><a class="reference internal" href="#buscando-tareas" id="id7">Buscando tareas</a></li>
+<li><p><a class="reference internal" href="#reportando-errores-bugs" id="id6">Reportando errores (bugs)</a></p></li>
+<li><p><a class="reference internal" href="#buscando-tareas" id="id7">Buscando tareas</a></p></li>
 <li>
-<a class="reference internal" href="#realizando-cambios" id="id8">Realizando cambios</a><ul>
-<li><a class="reference internal" href="#estructura-del-proyecto" id="id9">Estructura del proyecto</a></li>
-<li><a class="reference internal" href="#editar-una-pagina-incompleta" id="id10">Editar una página incompleta</a></li>
-<li><a class="reference internal" href="#crear-una-nueva-pagina" id="id11">Crear una nueva página</a></li>
-<li><a class="reference internal" href="#creando-una-nueva-seccion" id="id12">Creando una nueva sección</a></li>
-<li><a class="reference internal" href="#mi-segundo-pull-request" id="id13">Mi segundo Pull Request</a></li>
+<p><a class="reference internal" href="#realizando-cambios" id="id8">Realizando cambios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#estructura-del-proyecto" id="id9">Estructura del proyecto</a></p></li>
+<li><p><a class="reference internal" href="#editar-una-pagina-incompleta" id="id10">Editar una página incompleta</a></p></li>
+<li><p><a class="reference internal" href="#crear-una-nueva-pagina" id="id11">Crear una nueva página</a></p></li>
+<li><p><a class="reference internal" href="#creando-una-nueva-seccion" id="id12">Creando una nueva sección</a></p></li>
+<li><p><a class="reference internal" href="#mi-segundo-pull-request" id="id13">Mi segundo Pull Request</a></p></li>
 </ul>
 </li>
 <li>
-<a class="reference internal" href="#faq" id="id14">FAQ</a><ul>
-<li><a class="reference internal" href="#que-es-un-sitio-estatico" id="id15">¿Qué es un sitio estático?</a></li>
-<li><a class="reference internal" href="#por-que-no-se-hizo-un-sitio-dinamico-usando-un-framework-como-django" id="id16">¿Por qué no se hizo un sitio dinámico usando un framework como Django?</a></li>
-<li><a class="reference internal" href="#por-que-se-uso-nikola" id="id17">¿Por qué se usó Nikola?</a></li>
-<li><a class="reference internal" href="#por-que-no-usamos-las-rama-master" id="id18">¿Por qué no usamos las rama <tt class="docutils literal">master</tt>?</a></li>
+<p><a class="reference internal" href="#faq" id="id14">FAQ</a></p>
+<ul>
+<li><p><a class="reference internal" href="#que-es-un-sitio-estatico" id="id15">¿Qué es un sitio estático?</a></p></li>
+<li><p><a class="reference internal" href="#por-que-no-se-hizo-un-sitio-dinamico-usando-un-framework-como-django" id="id16">¿Por qué no se hizo un sitio dinámico usando un framework como Django?</a></p></li>
+<li><p><a class="reference internal" href="#por-que-se-uso-nikola" id="id17">¿Por qué se usó Nikola?</a></p></li>
+<li><p><a class="reference internal" href="#por-que-no-usamos-las-rama-master" id="id18">¿Por qué no usamos las rama <code class="docutils literal">master</code>?</a></p></li>
 </ul>
 </li>
 </ul>
@@ -135,21 +139,21 @@ no dudes en preguntar en <a class="reference external" href="https://t.me/python
 <p>Este proyecto usa Python 3, puedes descargarlo desde <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.
 Para verificar que tienes Python 3 en tu sistema ejecuta el siguiente comando en una terminal
 (ventana de comandos):</p>
-<pre class="code console"><a name="rest_code_cb795cac5730432ba196e020cab776db-1"></a><span class="gp">$</span> python --version
-<a name="rest_code_cb795cac5730432ba196e020cab776db-2"></a><span class="go">Python 3.6.5</span>
+<pre class="code console"><a name="rest_code_7552321068c0463d8d0a2f9dfb30a02a-1"></a><span class="gp">$</span> python --version
+<a name="rest_code_7552321068c0463d8d0a2f9dfb30a02a-2"></a><span class="go">Python 3.6.5</span>
 </pre>
 <p>Si el comando anterior no funcionó en Windows puedes intentar:</p>
-<pre class="code console"><a name="rest_code_7080fa2b0d6046c187c4a27fdd3731e5-1"></a><span class="gp">&gt;</span> py --version
-<a name="rest_code_7080fa2b0d6046c187c4a27fdd3731e5-2"></a><span class="go">Python 3.6.5</span>
+<pre class="code console"><a name="rest_code_188f30c16e9045e5adcf0b8315b99ed2-1"></a><span class="gp">&gt;</span> py --version
+<a name="rest_code_188f30c16e9045e5adcf0b8315b99ed2-2"></a><span class="go">Python 3.6.5</span>
 </pre>
-<p>Si la salida del comando es diferente, no te preocupes, sólo debes asegurarte que el primer número sea un <tt class="docutils literal">3</tt>.
-En caso que la salida haya sido algo como <tt class="docutils literal">2.7.14</tt>, intenta con el comando <tt class="docutils literal">python3 <span class="pre">--version</span></tt>.</p>
+<p>Si la salida del comando es diferente, no te preocupes, sólo debes asegurarte que el primer número sea un <code class="docutils literal">3</code>.
+En caso que la salida haya sido algo como <code class="docutils literal">2.7.14</code>, intenta con el comando <code class="docutils literal">python3 <span class="pre">--version</span></code>.</p>
 <p>En caso que ambos comandos te den un error o no sea la versión adecuada,
-asegúrate que Python esté en tu <tt class="docutils literal">PATH</tt> o instala la versión adecuada.</p>
+asegúrate que Python esté en tu <code class="docutils literal">PATH</code> o instala la versión adecuada.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">En los pasos siguientes usaremos el comando <tt class="docutils literal">python</tt>,
-si el resultado de los pasos anteriores tuviste éxito haciéndolo con <tt class="docutils literal">python3</tt>,
+<p class="admonition-title">Nota</p>
+<p>En los pasos siguientes usaremos el comando <code class="docutils literal">python</code>,
+si el resultado de los pasos anteriores tuviste éxito haciéndolo con <code class="docutils literal">python3</code>,
 debes usar ese comando.</p>
 </div>
 </div>
@@ -158,13 +162,13 @@ debes usar ese comando.</p>
 <p>El proyecto está bajo el sistema de control de versiones Git y alojado en GitHub,
 puedes descargar Git desde <a class="reference external" href="https://git-scm.com/download">https://git-scm.com/download</a> , o seguir nuestra <a class="reference external" href="../git">guía de instalación de Git</a>. Para verificar que tienes Git en tu sistema ejecuta el siguiente comando en una terminal
 (ventana de comandos):</p>
-<pre class="code bash"><a name="rest_code_31b157a3f1b645c783de362fe16b85a4-1"></a>$ git --version
-<a name="rest_code_31b157a3f1b645c783de362fe16b85a4-2"></a>git version <span class="m">2</span>.17.1
+<pre class="code bash"><a name="rest_code_d9be137476be4609971eda89bd0a2a96-1"></a>$ git --version
+<a name="rest_code_d9be137476be4609971eda89bd0a2a96-2"></a>git version <span class="m">2</span>.17.1
 </pre>
 <p>Luego de instalar Git se debe configurar el usuario y el correo electrónico con
 los siguientes comandos:</p>
-<pre class="code bash"><a name="rest_code_03c831809a5245b6b60180bdca7c555b-1"></a>git config --global user.name <span class="s2">"Juanito Perez"</span>
-<a name="rest_code_03c831809a5245b6b60180bdca7c555b-2"></a>git config --global user.email <span class="s2">"juanito@perez.com"</span>
+<pre class="code bash"><a name="rest_code_d144716d75df4e6aa980f86a588b1b41-1"></a>git config --global user.name <span class="s2">"Juanito Perez"</span>
+<a name="rest_code_d144716d75df4e6aa980f86a588b1b41-2"></a>git config --global user.email <span class="s2">"juanito@perez.com"</span>
 </pre>
 <p>Debes tener una cuenta en <a class="reference external" href="https://github.com/">GitHub</a>, inicia sesión,
 dirígete al <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io">proyecto de Python Ecuador</a>
@@ -172,24 +176,24 @@ y puedes darle una estrellita al <a class="reference external" href="https://git
 <img alt="/images/guias/colaborar/estrellita.png" class="align-center" src="../../images/guias/colaborar/estrellita.png"><div class="line-block">
 <div class="line"><br></div>
 </div>
-<p>Y luego presionar el botón <tt class="docutils literal">Fork</tt> para hacer un fork del proyecto en tu cuenta.</p>
+<p>Y luego presionar el botón <code class="docutils literal">Fork</code> para hacer un fork del proyecto en tu cuenta.</p>
 <img alt="/images/guias/colaborar/fork.png" class="align-center" src="../../images/guias/colaborar/fork.png"><p>Ejecuta el siguiente comando en una terminal para obtener el código.
-Donde <tt class="docutils literal"><span class="pre">{tu-usuario}</span></tt> es tu usuario de GitHub.</p>
-<pre class="code bash"><a name="rest_code_0966f1a7c87240f2b885a861e08c4fb0-1"></a>git clone https://github.com/<span class="o">{</span>tu-usuario<span class="o">}</span>/PythonEcuador.github.io.git
+Donde <code class="docutils literal"><span class="pre">{tu-usuario}</span></code> es tu usuario de GitHub.</p>
+<pre class="code bash"><a name="rest_code_e157c3849fa043ef91b2b7ae2917aa26-1"></a>git clone https://github.com/<span class="o">{</span>tu-usuario<span class="o">}</span>/PythonEcuador.github.io.git
 </pre>
-<p>Por ejemplo, para el usuario <tt class="docutils literal">Marlon5300</tt>:</p>
-<pre class="code bash"><a name="rest_code_df252b7f79594e7bae1bcaed5cc9f456-1"></a>git clone https://github.com/Marlon5300/PythonEcuador.github.io.git
+<p>Por ejemplo, para el usuario <code class="docutils literal">Marlon5300</code>:</p>
+<pre class="code bash"><a name="rest_code_dd54d37401ed457397ce6d8deafa26d5-1"></a>git clone https://github.com/Marlon5300/PythonEcuador.github.io.git
 </pre>
 <p>Entra al directorio que contiene el código fuente con</p>
-<pre class="code bash"><a name="rest_code_c39d6e2429a54d4fb0f7126f04360d7a-1"></a><span class="nb">cd</span> PythonEcuador.github.io
+<pre class="code bash"><a name="rest_code_1bfbb68a3f874d588c441c8069394cb7-1"></a><span class="nb">cd</span> PythonEcuador.github.io
 </pre>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p>El desarrollo se lleva a cabo sobre la rama <tt class="docutils literal">src</tt>.
+<p class="admonition-title">Nota</p>
+<p>El desarrollo se lleva a cabo sobre la rama <code class="docutils literal">src</code>.
 Por defecto tu repositorio debe estar en esta rama.
 Si tienes dudas ejecuta:</p>
-<div class="last"><pre class="code bash"><a name="rest_code_eb0b0c187f1248c28219d0d043f014c0-1"></a>git checkout src
-</pre></div>
+<pre class="code bash"><a name="rest_code_4843ddc10cda4c67b637d8315c459d48-1"></a>git checkout src
+</pre>
 </div>
 </div>
 <div class="section" id="ejecutando-el-proyecto">
@@ -198,53 +202,53 @@ Si tienes dudas ejecuta:</p>
 (no es necesario que sepas usarlo para empezar a colaborar en el proyecto).</p>
 <p>Crea un entorno virtual para instalar las dependencias de Python
 (este paso debes hacerlo sólo una vez):</p>
-<pre class="code bash"><a name="rest_code_576d47227cc84b0d89a7b8878293cdcb-1"></a>python -m venv venv
+<pre class="code bash"><a name="rest_code_ab79ffe310204584b288a2c9a1653403-1"></a>python -m venv venv
 </pre>
-<p>Con ese comando acabamos de crear un entorno virtual llamado <tt class="docutils literal">venv</tt>.
+<p>Con ese comando acabamos de crear un entorno virtual llamado <code class="docutils literal">venv</code>.
 Puedes leer más sobre los entornos virtuales de Python en <a class="reference external" href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a>.</p>
 <p>Ahora necesitamos activar el entorno virtual
 (este paso debes hacerlo cada vez que abras una nuevo terminal):</p>
-<pre class="code bash"><a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-1"></a><span class="c1"># Para sistemas Linux y Mac</span>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-2"></a><span class="nb">source</span> venv/bin/activate
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-3"></a>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-4"></a><span class="c1"># Para sistemas Windows</span>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-5"></a>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-6"></a>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-7"></a><span class="c1"># Para sistemas Windows, usando Git bash</span>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-8"></a>venv/Scripts/activate
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-9"></a>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-10"></a><span class="c1"># Si el comando anterior no funciona puedes probar:</span>
-<a name="rest_code_04d6b54c65d44c0f81433d185a90cdff-11"></a><span class="nb">source</span> venv/Scripts/activate
+<pre class="code bash"><a name="rest_code_c7fd5338107549848ff07ecc897058c2-1"></a><span class="c1"># Para sistemas Linux y Mac</span>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-2"></a><span class="nb">source</span> venv/bin/activate
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-3"></a>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-4"></a><span class="c1"># Para sistemas Windows</span>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-5"></a>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-6"></a>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-7"></a><span class="c1"># Para sistemas Windows, usando Git bash</span>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-8"></a>venv/Scripts/activate
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-9"></a>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-10"></a><span class="c1"># Si el comando anterior no funciona puedes probar:</span>
+<a name="rest_code_c7fd5338107549848ff07ecc897058c2-11"></a><span class="nb">source</span> venv/Scripts/activate
 </pre>
 <p>Ahora ya podemos instalar Nikola y otras dependencias:</p>
-<pre class="code bash"><a name="rest_code_37ddc40e80f44f2fb354a57238aa1bbd-1"></a>pip install -U pip setuptools wheel
-<a name="rest_code_37ddc40e80f44f2fb354a57238aa1bbd-2"></a>pip install -r requirements.txt
+<pre class="code bash"><a name="rest_code_3cdedc132ca848818049c53610f56c2b-1"></a>pip install -U pip setuptools wheel
+<a name="rest_code_3cdedc132ca848818049c53610f56c2b-2"></a>pip install -r requirements.txt
 </pre>
 <p>Finalmente, para ejecutar el sitio con Nikola</p>
-<pre class="code bash"><a name="rest_code_13a8d9e2d0eb4562bba61003bbb69a94-1"></a>nikola build
-<a name="rest_code_13a8d9e2d0eb4562bba61003bbb69a94-2"></a>nikola serve
+<pre class="code bash"><a name="rest_code_8c8e785ae7c04c2493dbda49e0f7095c-1"></a>nikola build
+<a name="rest_code_8c8e785ae7c04c2493dbda49e0f7095c-2"></a>nikola serve
 </pre>
 <p>Si abres tu navegador e ingresas a <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> podrás ver el sitio.</p>
 </div>
 <div class="section" id="ejecutando-los-tests">
 <h3><a class="toc-backref" href="#id5">Ejecutando los tests</a></h3>
 <p>Para ejecutar las pruebas instalamos <a class="reference external" href="https://nox.thea.codes/en/stable/">nox</a> en el entorno virtual creado, con el siguiente comando.</p>
-<pre class="code bash"><a name="rest_code_3e0e762d4cd04e0f862afff10176f67f-1"></a>pip install nox
+<pre class="code bash"><a name="rest_code_b94a4e447e0847de980cbdc3d8064a3a-1"></a>pip install nox
 </pre>
-<p>Usamos el comando nox para ejecutar las pruebas configuradas en el archivo <tt class="docutils literal">noxfile.py</tt> del proyecto.</p>
-<pre class="code bash"><a name="rest_code_644f5ce158a64df288d2adc8746ddf67-1"></a>nox
+<p>Usamos el comando nox para ejecutar las pruebas configuradas en el archivo <code class="docutils literal">noxfile.py</code> del proyecto.</p>
+<pre class="code bash"><a name="rest_code_efa4796f2b6f400298d651f0dcefb520-1"></a>nox
 </pre>
 </div>
 </div>
 <div class="section" id="reportando-errores-bugs">
 <h2><a class="toc-backref" href="#id6">Reportando errores (bugs)</a></h2>
-<p>GitHub usa <tt class="docutils literal">issues</tt> para dar seguimiento a tareas y reportar bugs.
+<p>GitHub usa <code class="docutils literal">issues</code> para dar seguimiento a tareas y reportar bugs.
 Si encuentras un error o tienes una idea para mejorar el sitio,
 <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/issues/new/choose">crea un nuevo issue</a>
 describiendo el bug/mejora.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Asegúrate que el bug no haya sido reportado antes o que ya exista una idea similar.
+<p class="admonition-title">Nota</p>
+<p>Asegúrate que el bug no haya sido reportado antes o que ya exista una idea similar.
 Busca en los <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/issues">issues ya creados</a>.</p>
 </div>
 </div>
@@ -257,34 +261,52 @@ para clasificarlos por complejidad y/o tipo.</p>
 <img alt="/images/guias/colaborar/search_issue.png" class="align-center" src="../../images/guias/colaborar/search_issue.png"><div class="line-block">
 <div class="line"><br></div>
 </div>
-<dl class="docutils">
+<dl class="simple">
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/good%20first%20issue">good first issue</a></dt>
-<dd>Tareas de complejidad fácil que te ayudarán a familiarizarte con el proyecto.</dd>
+<dd>
+<p>Tareas de complejidad fácil que te ayudarán a familiarizarte con el proyecto.</p>
+</dd>
 <dt>
 <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/bug">bug</a>, <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/enhancement">enhancement</a>
 </dt>
-<dd>Si ya resolviste suficientes tareas fáciles y quieres pasar al siguiente nivel.</dd>
+<dd>
+<p>Si ya resolviste suficientes tareas fáciles y quieres pasar al siguiente nivel.</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/decision%20needed">decision needed</a></dt>
-<dd>Indica que hace falta tomar una decisión para resolver el problema.</dd>
+<dd>
+<p>Indica que hace falta tomar una decisión para resolver el problema.</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/design">design</a></dt>
-<dd>Si lo tuyo es el diseño gráfico o web.</dd>
+<dd>
+<p>Si lo tuyo es el diseño gráfico o web.</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/help%20wanted">help wanted</a></dt>
-<dd>Indica que uno de los administradores busca ayuda en un issue o pull request</dd>
+<dd>
+<p>Indica que uno de los administradores busca ayuda en un issue o pull request</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/ready">ready</a></dt>
-<dd>Indica que el issue esta listo</dd>
+<dd>
+<p>Indica que el issue esta listo</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/wip">wip</a></dt>
-<dd>Indica que el issue está en progreso (Work in Progress)</dd>
+<dd>
+<p>Indica que el issue está en progreso (Work in Progress)</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/wontfix">wontfix</a></dt>
-<dd>Indica que el trabajo no va a continuar en un issue o pull request</dd>
+<dd>
+<p>Indica que el trabajo no va a continuar en un issue o pull request</p>
+</dd>
 <dt><a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/labels/sponsor">sponsor</a></dt>
-<dd>Indica que se debe agregar un nuevo sponsor mediante pull request</dd>
+<dd>
+<p>Indica que se debe agregar un nuevo sponsor mediante pull request</p>
+</dd>
 </dl>
 <p>También puedes ayudar <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/pulls">revisando pull requests</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<ul class="last simple">
-<li>Siempre asegúrate que alguien más ya no esté haciendo la tarea, así no gastamos esfuerzos.</li>
-<li>Si el issue no ha sido resuelto en un tiempo prudente siéntete libre de tomarlo.</li>
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Siempre asegúrate que alguien más ya no esté haciendo la tarea, así no gastamos esfuerzos.</p></li>
+<li><p>Si el issue no ha sido resuelto en un tiempo prudente siéntete libre de tomarlo.</p></li>
 </ul>
 </div>
 </div>
@@ -293,88 +315,100 @@ para clasificarlos por complejidad y/o tipo.</p>
 <p>Una vez que tengas un issue con cual trabajar.
 Crea una nueva rama con un nombre relacionado al issue que estás resolviendo.
 <cite>arregla-issue-13</cite> es el nombre de la rama usada en este ejemplo.</p>
-<pre class="code bash"><a name="rest_code_c8705f63321741eaaddbac0e6d084b72-1"></a>git checkout -b arregla-issue-13
+<pre class="code bash"><a name="rest_code_2d477f6b88894e9dad554b985fa4396b-1"></a>git checkout -b arregla-issue-13
 </pre>
 <p>Haz los cambios que sean pertinentes para resolver el issue.
 Puedes ver los cambios en tu navegador mientras editas los archivos con el siguiente comando</p>
-<pre class="code bash"><a name="rest_code_a5196ef11ca4465daa9147438d70399b-1"></a>nikola auto
+<pre class="code bash"><a name="rest_code_8c5fddf03af84a768a5c3e2deada7a19-1"></a>nikola auto
 </pre>
 <p>Para visualizar los archivos modificados y el estado del area de trabajo usa el siguiente comando.</p>
-<pre class="code bash"><a name="rest_code_2030adb7e4af4af0a81707d72ba7b914-1"></a>git status
+<pre class="code bash"><a name="rest_code_d355d6a07fde4a46aebf6c210129e18b-1"></a>git status
 </pre>
 <p>Trata de hacer un commit por cada bloque de cambios relacionados que hagas</p>
-<pre class="code bash"><a name="rest_code_4f7c721ac74a41b99b9874ffe9fe2553-1"></a>git add archivo-editado.rst
-<a name="rest_code_4f7c721ac74a41b99b9874ffe9fe2553-2"></a>git commit -m <span class="s2">"Arreglada falta ortográfica"</span>
+<pre class="code bash"><a name="rest_code_cb39e2ad2e0544e5b1195308e904b9c3-1"></a>git add archivo-editado.rst
+<a name="rest_code_cb39e2ad2e0544e5b1195308e904b9c3-2"></a>git commit -m <span class="s2">"Arreglada falta ortográfica"</span>
 </pre>
 <div class="admonition tip">
-<p class="first admonition-title">Consejo</p>
-<p class="last">En caso de redactar textos largos o simplemente necesitar una revisión ortográfica puedes utilizar la herramienta <a class="reference external" href="https://languagetool.org/">LanguageTool</a>.</p>
+<p class="admonition-title">Consejo</p>
+<p>En caso de redactar textos largos o simplemente necesitar una revisión ortográfica puedes utilizar la herramienta <a class="reference external" href="https://languagetool.org/">LanguageTool</a>.</p>
 </div>
 <p>Una vez que hayas hechos todos los cambios necesarios, súbelos a tu fork</p>
-<pre class="code bash"><a name="rest_code_3f346c7fe7b049f2b49e94d4766e1a12-1"></a>git push -u origin arregla-issue-13
+<pre class="code bash"><a name="rest_code_aad33e50773d4487af3218ccb9590427-1"></a>git push -u origin arregla-issue-13
 </pre>
 <p>Dirígete a la <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io">página del proyecto</a>
 y verás un mensaje sugiriéndote hacer un pull request (PR).
-En la descripción del PR describe brevemente los cambios que hiciste, no olvidar poner <tt class="docutils literal">Close #n</tt>, donde <tt class="docutils literal">n</tt> es el número del issue que estás resolviendo.</p>
+En la descripción del PR describe brevemente los cambios que hiciste, no olvidar poner <code class="docutils literal">Close #n</code>, donde <code class="docutils literal">n</code> es el número del issue que estás resolviendo.</p>
 <p>Espera a que un miembro de la comunidad revise tu PR,
 si son necesarios más cambios, los puedes hacer en la misma rama
 y repetir el proceso de agregar más commits.</p>
-<pre class="code bash"><a name="rest_code_7564ea6b2c154e81921da647ce3be6c7-1"></a>git add archivo-editado.rst
-<a name="rest_code_7564ea6b2c154e81921da647ce3be6c7-2"></a>git commit -m <span class="s2">"Más cambios"</span>
+<pre class="code bash"><a name="rest_code_e8606896c5eb47f2b43684693228c134-1"></a>git add archivo-editado.rst
+<a name="rest_code_e8606896c5eb47f2b43684693228c134-2"></a>git commit -m <span class="s2">"Más cambios"</span>
 </pre>
 <p>Una vez que ya los tengas listos, vuelve a subirlos</p>
-<pre class="code bash"><a name="rest_code_ccfdfe1b91f8476cbd0fae350159b24b-1"></a>git push
+<pre class="code bash"><a name="rest_code_5c7f8d927f5a4ef39bd14ced4a95f7ca-1"></a>git push
 </pre>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Tus cambios serán actualizados en el PR que ya abriste inicialmente.
+<p class="admonition-title">Nota</p>
+<p>Tus cambios serán actualizados en el PR que ya abriste inicialmente.
 Así que no es necesario que vuelvas a abrir otro.</p>
 </div>
 <p>Si no son necesarios más cambios y tu PR es aprobada,
 sólo debes esperar a que un miembro de la comunidad haga un merge.</p>
 <div class="section" id="estructura-del-proyecto">
 <h3><a class="toc-backref" href="#id9">Estructura del proyecto</a></h3>
-<dl class="docutils">
+<dl class="simple">
 <dt>files/</dt>
-<dd>Archivos generales del sitio</dd>
+<dd>
+<p>Archivos generales del sitio</p>
+</dd>
 <dt>pages/</dt>
-<dd>Aquí están todas las páginas del sitio</dd>
+<dd>
+<p>Aquí están todas las páginas del sitio</p>
+</dd>
 <dt>posts/</dt>
-<dd>Posts del sitio</dd>
+<dd>
+<p>Posts del sitio</p>
+</dd>
 <dt>themes/custom/</dt>
-<dd>Tema personalizado del sitio</dd>
+<dd>
+<p>Tema personalizado del sitio</p>
+</dd>
 <dt>themes/custom/assets/</dt>
-<dd>JavaScript, CSS, etc</dd>
+<dd>
+<p>JavaScript, CSS, etc</p>
+</dd>
 <dt>themes/custom/templates/</dt>
-<dd>Aquí están los templates; son archivos parecidos a html reutilizables</dd>
+<dd>
+<p>Aquí están los templates; son archivos parecidos a html reutilizables</p>
+</dd>
 <dt>conf.py</dt>
-<dd>En este archivo están las configuraciones del sitio</dd>
+<dd>
+<p>En este archivo están las configuraciones del sitio</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="editar-una-pagina-incompleta">
 <h3><a class="toc-backref" href="#id10">Editar una página incompleta</a></h3>
 <p>Si te topaste con una página con el título <em>¡Esta sección necesita de tu ayuda!</em>,
-para empezar a editarla debes localizar la página (se encuentran en el directorio <tt class="docutils literal">pages/</tt>)
-cada archivo corresponde a la URL de la página, por ejemplo si la página es <tt class="docutils literal">www.python.ec/eventos</tt>
-el archivo a editar se encontrará en <tt class="docutils literal">pages/eventos.rst</tt>.
+para empezar a editarla debes localizar la página (se encuentran en el directorio <code class="docutils literal">pages/</code>)
+cada archivo corresponde a la URL de la página, por ejemplo si la página es <code class="docutils literal">www.python.ec/eventos</code>
+el archivo a editar se encontrará en <code class="docutils literal">pages/eventos.rst</code>.
 Los archivos están escritos en <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText</a>. Tenemos un <a class="reference external" href="../rst">minitutorial de reStructuredText</a> que puedes seguir <a class="reference external" href="../rst">aquí</a>.</p>
 <blockquote>
-¡Pero ahí no está toda la página que vi en el navegador!</blockquote>
+<p>¡Pero ahí no está toda la página que vi en el navegador!</p>
+</blockquote>
 <p>Ya vamos a esa parte.</p>
 <p>Como podrás notar, al principio del archivo, se encuentran metadatos. Como:</p>
 <ul class="simple">
-<li>
-<tt class="docutils literal">title</tt>: El título de la página</li>
-<li>
-<tt class="docutils literal">slug</tt>: El path del URL</li>
-<li>
-<tt class="docutils literal">template</tt>: El template a ser usado para la página</li>
+<li><p><code class="docutils literal">title</code>: El título de la página</p></li>
+<li><p><code class="docutils literal">slug</code>: El path del URL</p></li>
+<li><p><code class="docutils literal">template</code>: El template a ser usado para la página</p></li>
 </ul>
 <p>Existen otros, pero esos son los más relevantes, sobre todo el de template.
-Por defecto estará en <tt class="docutils literal">ayuda.tmpl</tt>, tu primer paso será cambiarlo por <tt class="docutils literal">pagina.tmpl</tt>.
-Estos templates contienen el contenido base de la página (se encuentran en <tt class="docutils literal">themes/custom/templates/</tt>).
-Y los archivos <tt class="docutils literal">.rst</tt> sólo contienen el texto principal.</p>
-<p>Ahora sólo necesitas editar el archivo <tt class="docutils literal">.rst</tt> ¡y listo!</p>
+Por defecto estará en <code class="docutils literal">ayuda.tmpl</code>, tu primer paso será cambiarlo por <code class="docutils literal">pagina.tmpl</code>.
+Estos templates contienen el contenido base de la página (se encuentran en <code class="docutils literal">themes/custom/templates/</code>).
+Y los archivos <code class="docutils literal">.rst</code> sólo contienen el texto principal.</p>
+<p>Ahora sólo necesitas editar el archivo <code class="docutils literal">.rst</code> ¡y listo!</p>
 </div>
 <div class="section" id="crear-una-nueva-pagina">
 <h3><a class="toc-backref" href="#id11">Crear una nueva página</a></h3>
@@ -390,32 +424,32 @@ Y los archivos <tt class="docutils literal">.rst</tt> sólo contienen el texto p
 Antes de enviar tu segundo pull request,
 debes hacer un par de pasos para igualar tu fork con los últimos cambios del repositorio.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Asegúrate de repetir este proceso antes de tomar una nueva tarea.</p>
+<p class="admonition-title">Nota</p>
+<p>Asegúrate de repetir este proceso antes de tomar una nueva tarea.</p>
 </div>
-<p>Primero debemos cambiarnos nuevamente a la rama principal (<tt class="docutils literal">src</tt>).</p>
-<pre class="code bash"><a name="rest_code_769f49df572a49e19b78a67b1ba23911-1"></a>git checkout src
+<p>Primero debemos cambiarnos nuevamente a la rama principal (<code class="docutils literal">src</code>).</p>
+<pre class="code bash"><a name="rest_code_22d1920b201a42a79cc554ac5710883a-1"></a>git checkout src
 </pre>
 <p>Asegúrate que no tengas cambios residuales de tu anterior PR
 antes de proceder con los siguientes pasos
-(puedes usar <tt class="docutils literal">git status</tt> para comprobarlo).</p>
+(puedes usar <code class="docutils literal">git status</code> para comprobarlo).</p>
 <p>Necesitaremos hacerle saber a git del repo principal con el siguiente comando.</p>
-<pre class="code bash"><a name="rest_code_5c006d01eb1d42fbb2ebd179f3d0b8d2-1"></a>git remote add upstream https://github.com/PythonEcuador/PythonEcuador.github.io.git
+<pre class="code bash"><a name="rest_code_8f4dc825d94d462b95741d7ab2e0c5a9-1"></a>git remote add upstream https://github.com/PythonEcuador/PythonEcuador.github.io.git
 </pre>
 <p>Podemos comprobar que se añadio el repo principal con:</p>
-<pre class="code bash"><a name="rest_code_52bdba64e58248599bfb1f22c538bac8-1"></a>git remote -v
+<pre class="code bash"><a name="rest_code_c8fd9a45c9e749bc9eb50923520a1e0a-1"></a>git remote -v
 </pre>
 <div class="line-block">
 <div class="line"><br></div>
 </div>
 <img alt="/images/guias/colaborar/listar_remotos.png" class="align-center" src="../../images/guias/colaborar/listar_remotos.png"><p>Ahora ya podemos bajarnos los últimos cambios del repo principal.</p>
-<pre class="code bash"><a name="rest_code_72fdfaf7b55a49c7bade74fc4aacd85e-1"></a>git pull upstream src
+<pre class="code bash"><a name="rest_code_6f0ad1e63ff4484ea47f794e7243ef2d-1"></a>git pull upstream src
 </pre>
 <div class="line-block">
 <div class="line"><br></div>
 </div>
 <img alt="/images/guias/colaborar/pull_upstream.png" class="align-center" src="../../images/guias/colaborar/pull_upstream.png"><p>Y los subimos a nuestro fork</p>
-<pre class="code bash"><a name="rest_code_95b377502a224d0d8c3c680d2945081d-1"></a>git push origin src
+<pre class="code bash"><a name="rest_code_8a86676d5af04e9d98988e52ef423339-1"></a>git push origin src
 </pre>
 <div class="line-block">
 <div class="line"><br></div>
@@ -443,12 +477,12 @@ Es totalmente escalable y configurable.</p>
 <a class="reference external" href="https://github.com/PythonEcuador/PythonEcuador.github.io/issues/2">#2</a>.</p>
 </div>
 <div class="section" id="por-que-no-usamos-las-rama-master">
-<h3><a class="toc-backref" href="#id18">¿Por qué no usamos las rama <tt class="docutils literal">master</tt>?</a></h3>
+<h3><a class="toc-backref" href="#id18">¿Por qué no usamos las rama <code class="docutils literal">master</code>?</a></h3>
 <p>El sitio está alojado en GitHub Pages,
-por lo que se requiere que en la rama <tt class="docutils literal">master</tt>
-estén los archivos finales a ser servidos (los archivos <tt class="docutils literal">html</tt> resultado de hacer <tt class="docutils literal">nikola build</tt>).
-Por ello el desarrollo con los archivos <tt class="docutils literal">rst</tt> se lleva a cabo en la rama <tt class="docutils literal">src</tt>,
-y los archivos <em>compilados</em> se encuentran en <tt class="docutils literal">master</tt>.</p>
+por lo que se requiere que en la rama <code class="docutils literal">master</code>
+estén los archivos finales a ser servidos (los archivos <code class="docutils literal">html</code> resultado de hacer <code class="docutils literal">nikola build</code>).
+Por ello el desarrollo con los archivos <code class="docutils literal">rst</code> se lleva a cabo en la rama <code class="docutils literal">src</code>,
+y los archivos <em>compilados</em> se encuentran en <code class="docutils literal">master</code>.</p>
 </div>
 </div>
 </div>
